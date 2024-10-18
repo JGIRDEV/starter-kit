@@ -1,0 +1,33 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.Performance" 
+xmlns:table="sap.ui.table"
+displayBlock="true">
+    <Page id="Performance" title="{i18n>Performance}">
+        <Table items="{path: '/Employees'}">
+            <columns>
+                <Column>
+                <Label text="{i18n>Name}"/>
+                </Column>
+                <Column>
+                <Label text="{i18n>Position}"/>
+                </Column>
+                <Column>
+                <Label text="{i18n>Orders}"/>
+                </Column>
+                <Column>
+                <Label text="{i18n>Actions}"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <Text text="{parts: [{path: 'FirstName'},{path: 'LastName'}]}"/>
+                    <Text text="{path: 'Title'}"/>
+                    <Text text="{path: 'Orders', formatter: '.formatter.countOrders'}"/> 
+                    <FlexBox justifyContent="Start" alignItems="Baseline">
+                        <Button text="Motivate" press=".onMotivatePress"/>
+                        <Button text="Fire" press=".onFirePress"/>
+                    </FlexBox>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

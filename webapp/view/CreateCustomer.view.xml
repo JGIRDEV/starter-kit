@@ -1,0 +1,18 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+xmlns:table="sap.ui.table"
+displayBlock="true">
+    <Page title="CreateCustomer" id="CreateCustomer"
+        showNavButton="true" navButtonPress="handleNavButtonPress">
+            <Toolbar>
+                <Button type="Transparent" press="onPress" text="Create Customer"></Button>
+            </Toolbar>
+            <Text text="Customer ID:"/>
+            <Input value="{CustomerID}"/>
+            <Text text="Customer name:"/>
+            <Input value="{ContactName}"/>
+	<Toolbar> 
+		<Button type="Reject" text="Close" press=".closePress"></Button>
+		<Button type="Accept" text="Create" press=".createPress"></Button> 
+	</Toolbar>
+    </Page>
+</mvc:View>

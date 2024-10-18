@@ -1,0 +1,13 @@
+/* Enter your custom styles here */
+.Carosuel {
+    background-color: aqua;
+}
+tr span{
+    color: #00F !important;
+}
+.blueText tr:first-child span {
+    color: #00F !important;
+}
+.blueText tr:hover span {
+    color: #00f !important;
+}

@@ -1,0 +1,43 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="stk.starterkit.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <App id="app1">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                    <Carousel id="Carosuel" height="30%">
+                        <pages>
+                            <Image id="_IDGenImage1" width="55%" height="50%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png"/>
+                            <Image id="_IDGenImage3" width="55%" height="50%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png"/>
+                            <Image id="_IDGenImage2" width="45%" height="50%" src="https://www.sapspot.com/wp-content/uploads/2019/06/1-1.jpg"/>
+                        </pages>
+                        <customLayout>
+                            <CarouselLayout id="_IDGenCarouselLayout1" visiblePagesCount="2"/>
+                        </customLayout>    
+                    </Carousel>
+                    </content>
+                    <Toolbar>
+                        <Button text="{i18n>Create New Customer}" press="onCreateCustomerPress" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom"/>
+                    </Toolbar>
+                    <Table items="{/Customers}">
+                        <columns>
+                            <Column>
+                            <Label text="{i18n>companyName}"/>
+                            </Column>
+                            <Column>
+                            <Label text="{i18n>country}"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <Text text="{CompanyName}"/>
+                                <Text text="{Country}"/>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </Page>
+            </pages>
+        </App> 
+    </Shell>
+</mvc:View>

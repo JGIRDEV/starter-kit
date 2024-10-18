@@ -1,0 +1,38 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomersList" 
+xmlns:table="sap.ui.table"
+displayBlock="true">
+        <App id="app1">
+            <pages>
+                <Page id="pageList" title="{i18n>title}">
+                <Toolbar>
+                    <Button text="Create Customer" press=".createPressView"/>
+                    <Button text="Performance" press=".onPerformanceView"/>
+                </Toolbar>
+                    <Table items="{/Customers}">
+                        <columns>
+                            <Column>
+                            <Label text="{i18n>companyName}"/>
+                            </Column>
+                            <Column>
+                            <Label text="{i18n>city}"/>
+                            </Column>
+                            <Column>
+                            <Label text="{i18n>country}"/>
+                            </Column>
+                            <Column>
+                            <Label text="{i18n>fax}"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press=".onCustomerPress">
+                                <Text text="{CompanyName}"/>
+                                <Text text="{City}"/>
+                                <Text text="{Country}"/>
+                                <Text text="{Fax}"/>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </Page>
+            </pages>
+        </App> 
+</mvc:View>
