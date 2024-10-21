@@ -73,10 +73,10 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {
-            "defaultBindingMode": "TwoWay",
-            "defaultCountMode": "Inline",
-            "refreshAfterChange": false,
-            "useBatch": false
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false,
+          "useBatch": false
         }
       }
     },
@@ -128,19 +128,19 @@
         }
       ],
       "targets": {
-        "CustomerDetails":{
+        "CustomerDetails": {
           "viewType": "XML",
           "viewName": "CustomerDetails"
         },
-        "CustomersList":{
+        "CustomersList": {
           "viewType": "XML",
           "viewName": "CustomerList"
         },
-        "CreateCustomer":{
+        "CreateCustomer": {
           "viewType": "XML",
           "viewName": "CreateCustomer"
         },
-        "Performance":{
+        "Performance": {
           "viewType": "XML",
           "viewName": "Performance"
         }
@@ -152,7 +152,10 @@
       "type": "XML",
       "async": true,
       "id": "CustomerList"
-      
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "stkstarterkit"
   }
 }
